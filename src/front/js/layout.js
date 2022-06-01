@@ -14,7 +14,7 @@ import { Payment } from "./pages/payment";
 import { ChefProfile } from "./component/chefProfile";
 import { CreateUser } from "./pages/createUser";
 import { CourseView } from "./pages/CourseView";
-import { ModalPayment } from "../js/component/ModalPayment";
+
 import { Chef } from "./pages/chef";
 import { ChefInfo } from "./pages/chefInfo";
 
@@ -28,39 +28,39 @@ const Layout = () => {
     <div>
       <BrowserRouter>
         <ScrollToTop>
-            <NavTop />
-              <Switch>
-                <Route exact path="/">
-                  <Home />
-                </Route>
-                <Route exact path="/createcourse">
-                  <CreateCourse />
-                </Route>
-                <Route exact path="/user">
-                  <User />
-                </Route>
-                <Route exact path="/chef/:id">
-                  <ChefInfo />
-                </Route>
-                <Route exact path="/chef">
-                  <Chef />
-                </Route>
-                <Route exact path="/createuser">
-                  <CreateUser />
-                </Route>
-                <Route exact path="/login">
-                  <Login />
-                </Route>
-                <Route exact path="/search">
-                  <Search />
-                </Route>
-                
-                <Route exact path="/courseview/:id">
-                  <CourseView />
-                </Route>
-              </Switch>
-              <Footer />
-         </ScrollToTop>
+          <NavTop />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/createcourse">
+              <CreateCourse />
+            </Route>
+            <Route exact path="/user">
+              <User />
+            </Route>
+            <Route exact path="/chef/:id">
+              <ChefInfo />
+            </Route>
+            <Route exact path="/chef">
+              <Chef />
+            </Route>
+            <Route exact path="/createuser">
+              <CreateUser />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/search">
+              <Search />
+            </Route>
+
+            <Route exact path="/courseview/:id">
+              <CourseView />
+            </Route>
+          </Switch>
+          <Footer />
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   );
