@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       message: null,
       token: null,
       urlapi:
-        "https://3001-bernatll-proyectofinal4g-0hg8qcy39bg.ws-eu45.gitpod.io/api/",
+        "https://3001-bernatll-wecook4geeksfi-cr53c57l9mu.ws-eu46.gitpod.io/api/",
 
       course: [],
       chef: [],
@@ -155,11 +155,10 @@ const getState = ({ getStore, getActions, setStore }) => {
         });
         if (response.ok) {
           const data = await response.json();
-          console.log("AAAAAAAAAAAAAA"+data);
-          setStore({courseUser:data });
-          
+          console.log("AAAAAAAAAAAAAA" + data);
+          setStore({ courseUser: data });
         }
-        console.log("esto es lo que tengo"+getStore(store.courseUser));
+        console.log("esto es lo que tengo" + getStore(store.courseUser));
       },
 
       getMessage: () => {
@@ -223,14 +222,15 @@ const getState = ({ getStore, getActions, setStore }) => {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           }
-        )
+        );
         if (response.status == 200) {
           getActions().getCourseOfUser();
           const blabla = await response.json();
           return blabla.response;
         }
-      }
-  }}
+      },
+    },
+  };
 };
 
 export default getState;
